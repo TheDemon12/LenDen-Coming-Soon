@@ -36,7 +36,7 @@ class App extends Component {
 			<div className='mainBox'>
 				<div className='subBox'>
 					<Image
-						src='/demoLogo.png'
+						src={`${process.env.PUBLIC_URL}/demoLogo.png`}
 						style={{ maxWidth: '300px', width: '50vw' }}
 					/>
 					<h1 className='companyName'>LENDEN</h1>
