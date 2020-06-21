@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/LenDen/static/css/main.5404fe1d.chunk.css",
+    "main.js": "/LenDen/static/js/main.4b1eddc0.chunk.js",
+    "main.js.map": "/LenDen/static/js/main.4b1eddc0.chunk.js.map",
+    "runtime-main.js": "/LenDen/static/js/runtime-main.239590be.js",
+    "runtime-main.js.map": "/LenDen/static/js/runtime-main.239590be.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/LenDen/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.3c665dcc.chunk.js": "/LenDen/static/js/2.3c665dcc.chunk.js",
+    "static/js/2.3c665dcc.chunk.js.map": "/LenDen/static/js/2.3c665dcc.chunk.js.map",
+    "index.html": "/LenDen/index.html",
+    "precache-manifest.dd9e66eec4c9a38430a79039e9fb6c49.js": "/LenDen/precache-manifest.dd9e66eec4c9a38430a79039e9fb6c49.js",
+    "service-worker.js": "/LenDen/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/LenDen/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.5404fe1d.chunk.css.map": "/LenDen/static/css/main.5404fe1d.chunk.css.map",
+    "static/js/2.3c665dcc.chunk.js.LICENSE.txt": "/LenDen/static/js/2.3c665dcc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.239590be.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.3c665dcc.chunk.js",
+    "static/css/main.5404fe1d.chunk.css",
+    "static/js/main.4b1eddc0.chunk.js"
+  ]
+}
