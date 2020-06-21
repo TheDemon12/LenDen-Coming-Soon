@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9c89a874d7abf2e118598aaa19458755",
+    "revision": "2f5f8477429560fde0b624e684816a38",
     "url": "/LenDen-Coming-Soon/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LenDen-Coming-Soon/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "bb616698e670aceac4b1",
+    "revision": "ddd7fa0d2934c8ae9bd0",
     "url": "/LenDen-Coming-Soon/static/css/main.5404fe1d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/LenDen-Coming-Soon/static/js/2.3c665dcc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bb616698e670aceac4b1",
-    "url": "/LenDen-Coming-Soon/static/js/main.2ef969c8.chunk.js"
+    "revision": "ddd7fa0d2934c8ae9bd0",
+    "url": "/LenDen-Coming-Soon/static/js/main.181d0c11.chunk.js"
   },
   {
     "revision": "be543a632e1ffa6d1fc9",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/LenDen-Coming-Soon/precache-manifest.d1645febb10705896838cf7609b84ef0.js"
+  "/LenDen-Coming-Soon/precache-manifest.e11bdc816d36afe4181cbe52798c334c.js"
 );
 
 self.addEventListener('message', (event) => {

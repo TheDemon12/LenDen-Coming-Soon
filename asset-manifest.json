@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/LenDen-Coming-Soon/static/css/main.5404fe1d.chunk.css",
-    "main.js": "/LenDen-Coming-Soon/static/js/main.2ef969c8.chunk.js",
-    "main.js.map": "/LenDen-Coming-Soon/static/js/main.2ef969c8.chunk.js.map",
+    "main.js": "/LenDen-Coming-Soon/static/js/main.181d0c11.chunk.js",
+    "main.js.map": "/LenDen-Coming-Soon/static/js/main.181d0c11.chunk.js.map",
     "runtime-main.js": "/LenDen-Coming-Soon/static/js/runtime-main.bb31fea8.js",
     "runtime-main.js.map": "/LenDen-Coming-Soon/static/js/runtime-main.bb31fea8.js.map",
     "static/css/2.af3c1da9.chunk.css": "/LenDen-Coming-Soon/static/css/2.af3c1da9.chunk.css",
     "static/js/2.3c665dcc.chunk.js": "/LenDen-Coming-Soon/static/js/2.3c665dcc.chunk.js",
     "static/js/2.3c665dcc.chunk.js.map": "/LenDen-Coming-Soon/static/js/2.3c665dcc.chunk.js.map",
     "index.html": "/LenDen-Coming-Soon/index.html",
-    "precache-manifest.d1645febb10705896838cf7609b84ef0.js": "/LenDen-Coming-Soon/precache-manifest.d1645febb10705896838cf7609b84ef0.js",
+    "precache-manifest.e11bdc816d36afe4181cbe52798c334c.js": "/LenDen-Coming-Soon/precache-manifest.e11bdc816d36afe4181cbe52798c334c.js",
     "service-worker.js": "/LenDen-Coming-Soon/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/LenDen-Coming-Soon/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.5404fe1d.chunk.css.map": "/LenDen-Coming-Soon/static/css/main.5404fe1d.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.3c665dcc.chunk.js",
     "static/css/main.5404fe1d.chunk.css",
-    "static/js/main.2ef969c8.chunk.js"
+    "static/js/main.181d0c11.chunk.js"
   ]
 }
