@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, Form, Button } from 'react-bootstrap';
 import moment from 'moment';
 import 'moment-countdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 class App extends Component {
@@ -16,7 +18,7 @@ class App extends Component {
 
 	componentDidMount = () => {
 		this.myInterval = setInterval(() => {
-			const deadline = '2020-07-01';
+			const deadline = '2020-07-03';
 
 			const timeLeft = moment(deadline).countdown();
 			this.setState({
@@ -30,6 +32,11 @@ class App extends Component {
 		}, 1000);
 	};
 
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('submitted');
+	};
+
 	render() {
 		const { days, minutes, hours, seconds } = this.state.date;
 		return (
@@ -39,8 +46,19 @@ class App extends Component {
 						src={`${process.env.PUBLIC_URL}/demoLogo.png`}
 						style={{ maxWidth: '300px', width: '50vw' }}
 					/>
-					<h1 className='companyName'>LENDEN</h1>
-					<p className='comingSoon'>Our Website is Coming Soon !</p>
+					<h1 className='companyName'>Hola Amigos, </h1>
+					<p
+						className='comingSoon'
+						style={{ marginBottom: '6vh', marginTop: '1vh' }}>
+						We hope you are well and safe during these tough times.
+					</p>
+					<p className='comingSoon'>
+						Thank you for visiting our website. We are coming soon to redefine
+						exchange. Brace yourselves.
+					</p>
+					<p className='comingSoon' style={{ marginTop: '0vh' }}>
+						We will soon be launching our social media handles.
+					</p>
 					<div
 						className='timerBox'
 						style={{
@@ -64,7 +82,33 @@ class App extends Component {
 						</div>
 					</div>
 				</div>
-				<p>Subscribe to our Newsletter ?</p>
+				<div>
+					<FontAwesomeIcon
+						icon={faPaperPlane}
+						style={{
+							color: '#fff',
+							fontSize: '35px',
+							marginTop: '6vh',
+							marginBottom: '2vh',
+						}}
+					/>
+					<p className='newsletter'>Do not miss any update from us.</p>
+					<p className='newsletter'>Subscribe to our newsletter</p>
+					<Form
+						style={{ maxWidth: 300, margin: 'auto' }}
+						noValidate
+						onSubmit={this.handleSubmit}>
+						<Form.Group controlId='formBasicEmail'>
+							<Form.Control type='email' placeholder='Email Address' />
+						</Form.Group>
+						<Button
+							variant='primary'
+							type='submit'
+							style={{ backgroundColor: '#ef5350', border: 'none' }}>
+							Subscribe
+						</Button>
+					</Form>
+				</div>
 			</div>
 		);
 	}

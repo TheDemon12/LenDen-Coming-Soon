@@ -2,7 +2,8 @@
 
 .mainBox {
 	/* display: flex; */
-	padding-top: 8vh;
+	padding: 0 10px;
+	padding-top: 5vh;
 	min-height: 100vh;
 	background-color: #212121;
 	align-items: center;
@@ -17,20 +18,21 @@
 }
 
 .companyName {
+	margin-top: 2vh;
 	font-size: 35px;
 	font-family: 'Dosis';
 	font-weight: 800;
 }
 
 .comingSoon {
-	margin-top: 5vh;
-	font-size: 40px;
+	margin-top: 3vh;
+	font-size: 25px;
 	font-family: 'Dosis';
 	font-weight: 700;
 }
 .timerBox {
 	margin: auto;
-	margin-top: 20vh;
+	margin-top: 8vh;
 	max-width: 600px;
 }
 .timerElement {
@@ -39,4 +41,62 @@
 	font-weight: 700;
 	/* margin: 0 10px; */
 	/* margin: 0 10px; */
+}
+.newsletter {
+	font-size: 19px;
+	font-family: 'Dosis';
+	font-weight: 700;
+}
+
+.newsletter:first-of-type {
+	/* margin-top: 8vh; */
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 500px) {
+	.mainBox {
+		padding-top: 1vh;
+	}
+	.companyName {
+		font-size: 32px;
+	}
+	/* .timerBox {
+		
+		margin-top: 5vh;
+		
+	} */
+
+	.comingSoon {
+		margin-top: 3vh;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	.timerElement {
+		font-size: 25px;
+		font-weight: 600;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.companyName {
+		font-size: 30px;
+	}
+
+	/* .timerBox {
+		
+		margin-top: 5vh;
+		
+	} */
+
+	.comingSoon {
+		margin-top: 3vh;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.timerElement {
+		font-size: 22px;
+		font-weight: 600;
+	}
 }
