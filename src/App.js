@@ -7,10 +7,15 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import CommonForm from './components/common/commonForm';
 import Joi from 'joi-browser';
+import { ToastContainer, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import http from './services/httpService';
 
 class App extends CommonForm {
 	state = {
-		data: {},
+		data: {
+			email: '',
+		},
 		error: '',
 		success: '',
 		loading: false,
@@ -45,15 +50,15 @@ class App extends CommonForm {
 	doSubmit = async () => {
 		const { data } = this.state;
 		this.setState({ loading: true });
+		const success = 'Subscribed Successfully!';
 
 		try {
-			setTimeout(() => {
-				const success = 'Subscribed Successfully!';
-				this.setState({ loading: false, success });
-			}, 2000);
+			await http.post(
+				'http://ldcomingsoon-env.eba-hn293vuq.ap-south-1.elasticbeanstalk.com/lenden/addemail',
+				data
+			);
+			this.setState({ loading: false, success });
 		} catch (ex) {
-			const error = 'Something Failed';
-			this.setState({ error });
 			this.setState({ loading: false });
 		}
 	};
@@ -61,140 +66,145 @@ class App extends CommonForm {
 	render() {
 		const { days, minutes, hours, seconds } = this.state.date;
 		return (
-			<div className='mainBox'>
-				<div className='subBox'>
-					<Image
-						src={`${process.env.PUBLIC_URL}/logo.png`}
-						style={{
-							maxWidth: '260px',
-							width: '40vw',
-							// borderRadius: '100%',
-							// border: '2px solid #424242',
-							marginBottom: '2vh',
-							// marginTop: '2vh',
-						}}
-					/>
-					<h1 className='companyName'>Hello there!</h1>
-					<p
-						className='comingSoon'
-						style={{ marginBottom: '2vh', marginTop: '1vh' }}>
-						Times are testing. We hope that you are safe and healthy.
-					</p>
-					<p className='comingSoon'>
-						We are in the process of redefining exchange and our team is super
-						glad that you decided to stick with us from Day 1.
-					</p>
-					<p className='comingSoon'>
-						However, we might need some time and patience from you. Our team
-						sincerely hopes that you stick with us while we launch our social
-						media handles.
-					</p>
-					<p className='comingSoon'>
-						Getting curious? Write to us at{' '}
-						<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
-					</p>
-					<div
-						className='timerBox'
-						style={{
-							display: 'flex',
-							// border: '1px solid #FDBA49',
-							padding: '10px',
-							alignItems: 'flex-end',
-						}}>
-						<div
-							className='timerElement'
-							style={{ flexBasis: '25%', position: 'relative' }}>
-							<Image
-								src={`${process.env.PUBLIC_URL}/phone.png`}
-								style={{
-									maxHeight: '13vw',
-									maxWidth: '70%',
-								}}
-							/>
-							<div>{days}</div>
-							<div className='timerElementName'>Days</div>
-						</div>
-						<div
-							className='timerElement'
-							style={{ flexBasis: '25%', position: 'relative' }}>
-							<Image
-								src={`${process.env.PUBLIC_URL}/book.png`}
-								style={{
-									maxHeight: '15vw',
-									maxWidth: '60%',
-								}}
-							/>
-							<div>{hours}</div>
-							<div className='timerElementName'>Hours</div>
-						</div>
-						<div
-							className='timerElement'
-							style={{ flexBasis: '25%', position: 'relative' }}>
-							<Image
-								src={`${process.env.PUBLIC_URL}/gaming.png`}
-								style={{
-									maxHeight: '15vw',
-									maxWidth: '70%',
-								}}
-							/>
-							<div>{minutes}</div>
-							<div className='timerElementName'>Minutes</div>
-						</div>
-						<div
-							className='timerElement'
-							style={{ flexBasis: '25%', position: 'relative' }}>
-							<Image
-								src={`${process.env.PUBLIC_URL}/headphones.png`}
-								style={{
-									maxHeight: '15vw',
-									maxWidth: '70%',
-								}}
-							/>
-							<div>{seconds}</div>
-							<div className='timerElementName'>Seconds</div>
-						</div>
-					</div>
-					<div
-						style={{
-							border: '1px solid #FDBA49',
-							marginTop: '6vh',
-							width: '80vw',
-							maxWidth: '400px',
-							padding: '15px 25px',
-							margin: '5vh auto ',
-						}}>
-						<FontAwesomeIcon
-							icon={faPaperPlane}
+			<React.Fragment>
+				<ToastContainer />
+				<div className='mainBox'>
+					<div className='subBox'>
+						<Image
+							src={`${process.env.PUBLIC_URL}/logo.png`}
 							style={{
-								color: '#FDBA49',
-								fontSize: '35px',
-								marginTop: '1vh',
+								maxWidth: '260px',
+								width: '40vw',
+								// borderRadius: '100%',
+								// border: '2px solid #424242',
 								marginBottom: '2vh',
+								// marginTop: '2vh',
 							}}
 						/>
-						<p className='newsletter'>No love (news)letters, purely barter.</p>
-						<p className='newsletter'> Subscribe now</p>
-						<Form
-							style={{ maxWidth: 300, margin: 'auto' }}
-							noValidate
-							onSubmit={this.handleSubmit}>
-							{this.renderInput('email', 'Email Address')}
-							{this.renderAlert()}
-							{this.renderSuccessAlert()}
-							{this.renderLoader()}
-							<Button
-								variant='primary'
-								type='submit'
+						<h1 className='companyName'>Hello there!</h1>
+						<p
+							className='comingSoon'
+							style={{ marginBottom: '2vh', marginTop: '1vh' }}>
+							Times are testing. We hope that you are safe and healthy.
+						</p>
+						<p className='comingSoon'>
+							We are in the process of redefining exchange and our team is super
+							glad that you decided to stick with us from Day 1.
+						</p>
+						<p className='comingSoon'>
+							However, we might need some time and patience from you. Our team
+							sincerely hopes that you stick with us while we launch our social
+							media handles.
+						</p>
+						<p className='comingSoon'>
+							Getting curious? Write to us at{' '}
+							<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
+						</p>
+						<div
+							className='timerBox'
+							style={{
+								display: 'flex',
+								// border: '1px solid #FDBA49',
+								padding: '10px',
+								alignItems: 'flex-end',
+							}}>
+							<div
+								className='timerElement'
+								style={{ flexBasis: '25%', position: 'relative' }}>
+								<Image
+									src={`${process.env.PUBLIC_URL}/phone.png`}
+									style={{
+										maxHeight: '13vw',
+										maxWidth: '70%',
+									}}
+								/>
+								<div>{days}</div>
+								<div className='timerElementName'>Days</div>
+							</div>
+							<div
+								className='timerElement'
+								style={{ flexBasis: '25%', position: 'relative' }}>
+								<Image
+									src={`${process.env.PUBLIC_URL}/book.png`}
+									style={{
+										maxHeight: '15vw',
+										maxWidth: '60%',
+									}}
+								/>
+								<div>{hours}</div>
+								<div className='timerElementName'>Hours</div>
+							</div>
+							<div
+								className='timerElement'
+								style={{ flexBasis: '25%', position: 'relative' }}>
+								<Image
+									src={`${process.env.PUBLIC_URL}/gaming.png`}
+									style={{
+										maxHeight: '15vw',
+										maxWidth: '70%',
+									}}
+								/>
+								<div>{minutes}</div>
+								<div className='timerElementName'>Minutes</div>
+							</div>
+							<div
+								className='timerElement'
+								style={{ flexBasis: '25%', position: 'relative' }}>
+								<Image
+									src={`${process.env.PUBLIC_URL}/headphones.png`}
+									style={{
+										maxHeight: '15vw',
+										maxWidth: '70%',
+									}}
+								/>
+								<div>{seconds}</div>
+								<div className='timerElementName'>Seconds</div>
+							</div>
+						</div>
+						<div
+							style={{
+								border: '1px solid #FDBA49',
+								marginTop: '6vh',
+								width: '80vw',
+								maxWidth: '400px',
+								padding: '15px 25px',
+								margin: '5vh auto ',
+							}}>
+							<FontAwesomeIcon
+								icon={faPaperPlane}
 								style={{
-									backgroundColor: '#FDBA49',
-									border: 'none',
-								}}>
-								Subscribe
-							</Button>
-						</Form>
+									color: '#FDBA49',
+									fontSize: '35px',
+									marginTop: '1vh',
+									marginBottom: '2vh',
+								}}
+							/>
+							<p className='newsletter'>
+								No love (news)letters, purely barter.
+							</p>
+							<p className='newsletter'> Subscribe now</p>
+							<Form
+								style={{ maxWidth: 300, margin: 'auto' }}
+								noValidate
+								onSubmit={this.handleSubmit}>
+								{this.renderInput('email', 'Email Address')}
+								{this.renderAlert()}
+								{this.renderSuccessAlert()}
+								{this.renderLoader()}
+								<Button
+									variant='primary'
+									type='submit'
+									style={{
+										backgroundColor: '#FDBA49',
+										border: 'none',
+									}}>
+									Subscribe
+								</Button>
+							</Form>
+						</div>
 					</div>
 				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }
