@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis');
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
 
 .mainBox {
 	/* display: flex; */
-	padding: 0 10px;
+	/* padding: 0 10px; */
 	/* padding-top: 2vh; */
 	min-height: 100vh;
-	background-color: #fff;
+	/* background-color: #000; */
 	align-items: center;
 	text-align: center;
 	color: #424242;
@@ -13,21 +13,27 @@
 }
 
 .subBox {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 30px;
 	margin: auto;
-	/* max-width: 350px; */
+	background-color: #ffffff;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	max-width: 1200px;
 }
 
 .companyName {
-	/* margin-top: 2vh; */
+	margin-top: 2vh;
 	font-size: 35px;
-	font-family: 'Dosis';
+	font-family: 'Raleway';
 	font-weight: 800;
+	margin-bottom: 2vh;
 }
 
 .comingSoon {
-	margin-top: 3vh;
-	font-size: 25px;
-	font-family: 'Dosis';
+	margin-top: 2vh;
+	font-size: 20px;
+	font-family: 'Raleway';
 	font-weight: 700;
 }
 .timerBox {
@@ -37,7 +43,7 @@
 }
 .timerElement {
 	font-size: 35px;
-	font-family: 'Dosis';
+	font-family: 'Raleway';
 	font-weight: 700;
 	/* margin: 0 10px; */
 	/* margin: 0 10px; */
@@ -48,7 +54,7 @@
 }
 .newsletter {
 	font-size: 19px;
-	font-family: 'Dosis';
+	font-family: 'Raleway';
 	font-weight: 700;
 }
 
@@ -82,11 +88,19 @@ button:focus {
 }
 
 @media screen and (max-width: 500px) {
-	.mainBox {
+	/* .mainBox {
 		padding-top: 1vh;
+	} */
+
+	.subBox {
+		margin-top: 1vh;
+		box-shadow: none;
+		background-color: transparent;
+		padding: 0 10px;
 	}
 	.companyName {
-		font-size: 32px;
+		margin-top: 0;
+		font-size: 28px;
 	}
 	/* .timerBox {
 		
@@ -95,23 +109,26 @@ button:focus {
 	} */
 
 	.comingSoon {
-		margin-top: 3vh;
-		font-size: 22px;
+		margin-top: 2vh;
+		font-size: 18px;
 		font-weight: 700;
 	}
 
 	.timerElement {
-		font-size: 35px;
+		font-size: 30px;
 		font-weight: 600;
 	}
 	.timerElementName {
-		font-size: 20px;
+		font-size: 18px;
+	}
+	.newsletter {
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-width: 360px) {
 	.companyName {
-		font-size: 30px;
+		font-size: 26px;
 	}
 
 	/* .timerBox {
@@ -121,16 +138,20 @@ button:focus {
 	} */
 
 	.comingSoon {
-		margin-top: 3vh;
-		font-size: 20px;
+		margin-top: 2vh;
+		font-size: 16px;
 		font-weight: 700;
 	}
 
 	.timerElement {
-		font-size: 30px;
+		font-size: 28px;
 		font-weight: 600;
 	}
 	.timerElementName {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	.newsletter {
+		font-size: 14px;
 	}
 }

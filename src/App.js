@@ -28,7 +28,7 @@ class App extends CommonForm {
 
 	componentDidMount = () => {
 		this.myInterval = setInterval(() => {
-			const deadline = '2020-07-03';
+			const deadline = '2020-07-14';
 
 			const timeLeft = moment(deadline).countdown();
 			this.setState({
@@ -68,22 +68,30 @@ class App extends CommonForm {
 						style={{
 							maxWidth: '260px',
 							width: '40vw',
-							borderRadius: '100%',
+							// borderRadius: '100%',
 							// border: '2px solid #424242',
+							marginBottom: '2vh',
+							// marginTop: '2vh',
 						}}
 					/>
-					<h1 className='companyName'>Hola Amigos, </h1>
+					<h1 className='companyName'>Hello there!</h1>
 					<p
 						className='comingSoon'
-						style={{ marginBottom: '4vh', marginTop: '1vh' }}>
-						We hope you are well and safe during these tough times.
+						style={{ marginBottom: '2vh', marginTop: '1vh' }}>
+						Times are testing. We hope that you are safe and healthy.
 					</p>
 					<p className='comingSoon'>
-						Thank you for visiting our website. We are coming soon to redefine
-						exchange. Brace yourselves.
+						We are in the process of redefining exchange and our team is super
+						glad that you decided to stick with us from Day 1.
 					</p>
-					<p className='comingSoon' style={{ marginTop: '0vh' }}>
-						We will soon be launching our social media handles.
+					<p className='comingSoon'>
+						However, we might need some time and patience from you. Our team
+						sincerely hopes that you stick with us while we launch our social
+						media handles.
+					</p>
+					<p className='comingSoon'>
+						Getting curious? Write to us at{' '}
+						<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
 					</p>
 					<div
 						className='timerBox'
@@ -146,45 +154,45 @@ class App extends CommonForm {
 							<div className='timerElementName'>Seconds</div>
 						</div>
 					</div>
-				</div>
-				<div
-					style={{
-						border: '1px solid #FDBA49',
-						marginTop: '6vh',
-						width: '80vw',
-						maxWidth: '400px',
-						padding: '15px 25px',
-						margin: '5vh auto ',
-					}}>
-					<FontAwesomeIcon
-						icon={faPaperPlane}
+					<div
 						style={{
-							color: '#FDBA49',
-							fontSize: '35px',
-							marginTop: '1vh',
-							marginBottom: '2vh',
-						}}
-					/>
-					<p className='newsletter'>Do not miss any update from us.</p>
-					<p className='newsletter'>Subscribe to our Newsletter</p>
-					<Form
-						style={{ maxWidth: 300, margin: 'auto' }}
-						noValidate
-						onSubmit={this.handleSubmit}>
-						{this.renderInput('email', 'Email Address')}
-						{this.renderAlert()}
-						{this.renderSuccessAlert()}
-						{this.renderLoader()}
-						<Button
-							variant='primary'
-							type='submit'
+							border: '1px solid #FDBA49',
+							marginTop: '6vh',
+							width: '80vw',
+							maxWidth: '400px',
+							padding: '15px 25px',
+							margin: '5vh auto ',
+						}}>
+						<FontAwesomeIcon
+							icon={faPaperPlane}
 							style={{
-								backgroundColor: '#FDBA49',
-								border: 'none',
-							}}>
-							Subscribe
-						</Button>
-					</Form>
+								color: '#FDBA49',
+								fontSize: '35px',
+								marginTop: '1vh',
+								marginBottom: '2vh',
+							}}
+						/>
+						<p className='newsletter'>No love (news)letters, purely barter.</p>
+						<p className='newsletter'> Subscribe now</p>
+						<Form
+							style={{ maxWidth: 300, margin: 'auto' }}
+							noValidate
+							onSubmit={this.handleSubmit}>
+							{this.renderInput('email', 'Email Address')}
+							{this.renderAlert()}
+							{this.renderSuccessAlert()}
+							{this.renderLoader()}
+							<Button
+								variant='primary'
+								type='submit'
+								style={{
+									backgroundColor: '#FDBA49',
+									border: 'none',
+								}}>
+								Subscribe
+							</Button>
+						</Form>
+					</div>
 				</div>
 			</div>
 		);
