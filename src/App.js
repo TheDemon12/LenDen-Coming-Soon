@@ -53,10 +53,7 @@ class App extends CommonForm {
 		const success = 'Subscribed Successfully!';
 
 		try {
-			await http.post(
-				'http://ldcomingsoon-env.eba-hn293vuq.ap-south-1.elasticbeanstalk.com/lenden/addemail',
-				data
-			);
+			await http.post('https://api2.lendenindia.in/lenden/addemail', data);
 			this.setState({ loading: false, success });
 		} catch (ex) {
 			this.setState({ loading: false });
