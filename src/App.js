@@ -33,7 +33,7 @@ class App extends CommonForm {
 
 	componentDidMount = () => {
 		this.myInterval = setInterval(() => {
-			const deadline = '2020-07-14';
+			const deadline = '2020-07-16';
 
 			const timeLeft = moment(deadline).countdown();
 			this.setState({
