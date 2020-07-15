@@ -32,19 +32,18 @@ class App extends CommonForm {
 	};
 
 	componentDidMount = () => {
-		this.myInterval = setInterval(() => {
-			const deadline = '2020-07-16';
-
-			const timeLeft = moment(deadline).countdown();
-			this.setState({
-				date: {
-					days: timeLeft.days,
-					hours: timeLeft.hours,
-					minutes: timeLeft.minutes,
-					seconds: timeLeft.seconds,
-				},
-			});
-		}, 1000);
+		// this.myInterval = setInterval(() => {
+		// 	const deadline = '2020-07-16';
+		// 	const timeLeft = moment(deadline).countdown();
+		// 	this.setState({
+		// 		date: {
+		// 			days: timeLeft.days,
+		// 			hours: timeLeft.hours,
+		// 			minutes: timeLeft.minutes,
+		// 			seconds: timeLeft.seconds,
+		// 		},
+		// 	});
+		// }, 1000);
 	};
 
 	doSubmit = async () => {
@@ -61,7 +60,7 @@ class App extends CommonForm {
 	};
 
 	render() {
-		const { days, minutes, hours, seconds } = this.state.date;
+		// const { days, minutes, hours, seconds } = this.state.date;
 		return (
 			<React.Fragment>
 				<ToastContainer />
@@ -115,8 +114,8 @@ class App extends CommonForm {
 										maxWidth: '70%',
 									}}
 								/>
-								<div>{days}</div>
-								<div className='timerElementName'>Days</div>
+								{/* <div>{days}</div>
+								<div className='timerElementName'>Days</div> */}
 							</div>
 							<div
 								className='timerElement'
@@ -128,8 +127,8 @@ class App extends CommonForm {
 										maxWidth: '60%',
 									}}
 								/>
-								<div>{hours}</div>
-								<div className='timerElementName'>Hours</div>
+								{/* <div>{hours}</div>
+								<div className='timerElementName'>Hours</div> */}
 							</div>
 							<div
 								className='timerElement'
@@ -141,8 +140,8 @@ class App extends CommonForm {
 										maxWidth: '70%',
 									}}
 								/>
-								<div>{minutes}</div>
-								<div className='timerElementName'>Minutes</div>
+								{/* <div>{minutes}</div>
+								<div className='timerElementName'>Minutes</div> */}
 							</div>
 							<div
 								className='timerElement'
@@ -154,8 +153,8 @@ class App extends CommonForm {
 										maxWidth: '70%',
 									}}
 								/>
-								<div>{seconds}</div>
-								<div className='timerElementName'>Seconds</div>
+								{/* <div>{seconds}</div>
+								<div className='timerElementName'>Seconds</div> */}
 							</div>
 						</div>
 						<div
