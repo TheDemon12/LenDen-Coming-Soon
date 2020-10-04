@@ -4,6 +4,11 @@ import moment from 'moment';
 import 'moment-countdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {
+	faInstagram,
+	faLinkedin,
+	faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 import CommonForm from './components/common/commonForm';
 import Joi from 'joi-browser';
@@ -66,17 +71,7 @@ class App extends CommonForm {
 				<ToastContainer />
 				<div className='mainBox'>
 					<div className='subBox'>
-						<Image
-							src={`${process.env.PUBLIC_URL}/logo.png`}
-							style={{
-								maxWidth: '260px',
-								width: '40vw',
-								// borderRadius: '100%',
-								// border: '2px solid #424242',
-								marginBottom: '2vh',
-								// marginTop: '2vh',
-							}}
-						/>
+						<Image src={`${process.env.PUBLIC_URL}/logo.png`} />
 						<h1 className='companyName'>Hello there!</h1>
 						<p
 							className='comingSoon'
@@ -157,6 +152,55 @@ class App extends CommonForm {
 								<div className='timerElementName'>Seconds</div> */}
 							</div>
 						</div>
+
+						<div
+							style={{
+								margin: '2rem 0',
+							}}>
+							<h1
+								style={{
+									fontFamily: 'Raleway',
+									fontWeight: 800,
+									fontSize: '2.4rem',
+								}}>
+								Follow us here!
+							</h1>
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									margin: '1rem 0',
+								}}>
+								<FontAwesomeIcon
+									icon={faFacebook}
+									style={{
+										color: 'rgb(26,38,57)',
+										fontSize: '35px',
+										margin: '0 1rem',
+										cursor: 'pointer',
+									}}
+								/>
+								<FontAwesomeIcon
+									icon={faInstagram}
+									style={{
+										color: 'rgb(26,38,57)',
+										fontSize: '35px',
+										margin: '0 1rem',
+										cursor: 'pointer',
+									}}
+								/>
+								<FontAwesomeIcon
+									icon={faLinkedin}
+									style={{
+										color: 'rgb(26,38,57)',
+										fontSize: '35px',
+										margin: '0 1rem',
+										cursor: 'pointer',
+									}}
+								/>
+							</div>
+						</div>
+
 						<div
 							style={{
 								border: '1px solid #FDBA49',

@@ -22,6 +22,12 @@
 	max-width: 1200px;
 }
 
+.subBox > img {
+	max-width: 250px;
+	width: 35vw;
+	margin: 3rem auto;
+}
+
 .companyName {
 	margin-top: 2vh;
 	font-size: 35px;
