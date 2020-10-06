@@ -77,13 +77,14 @@
 	padding: 0.75rem 1rem;
 }
 .input:focus {
-	border: none;
-	box-shadow: 0 0 0 0.2rem rgba(253, 186, 73, 0.8) !important;
+	border: none !important;
+	box-shadow: 0 0 0 0.1rem rgba(26, 38, 57, 0.4) !important;
+	outline: none !important;
 }
 
 button:focus {
 	border: none;
-	box-shadow: 0 0 0 0.2rem rgba(253, 186, 73, 0.4) !important;
+	box-shadow: none !important;
 }
 
 #error-success {

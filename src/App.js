@@ -61,6 +61,11 @@ class App extends CommonForm {
 			this.setState({ loading: false, success });
 		} catch (ex) {
 			this.setState({ loading: false });
+			if (ex.response.status === 400) {
+				this.setState({
+					error: 'You have already been subscribed!',
+				});
+			}
 		}
 	};
 
@@ -72,25 +77,39 @@ class App extends CommonForm {
 				<div className='mainBox'>
 					<div className='subBox'>
 						<Image src={`${process.env.PUBLIC_URL}/logo.png`} />
-						<h1 className='companyName'>Hello there!</h1>
+						<h1 className='companyName'>Hello there,</h1>
 						<p
 							className='comingSoon'
 							style={{ marginBottom: '2vh', marginTop: '1vh' }}>
 							Times are testing. We hope that you are safe and healthy.
 						</p>
 						<p className='comingSoon'>
-							We are in the process of redefining exchange and our team is super
-							glad that you decided to stick with us from Day 1.
+							<span style={{ fontWeight: 600 }}>Len Den</span> is an online
+							platform which facilitates cashless exchange of used goods using a
+							blend of modern technology and the 6000 BC concept of Barter
+							System.
 						</p>
 						<p className='comingSoon'>
+							We aim at bringing about a sustainable way of living by lowering
+							the dependency on cash as a medium of exchange and adding value to
+							your product through our unique valuation system.
+						</p>
+
+						<p className='comingSoon'>
+							By simply swapping your products you are saving your money, time,
+							energy and environment: all at once. So India, let's get to
+							swapping!
+						</p>
+						{/* <p className='comingSoon'>
+							We are in the process of redefining exchange and our team is super
+							glad that you decided to stick with us from Day 1.
+						</p> */}
+						{/* <p className='comingSoon'>
 							However, we might need some time and patience from you. Our team
 							sincerely hopes that you stick with us while we launch our social
 							media handles.
-						</p>
-						<p className='comingSoon'>
-							Getting curious? Write to us at{' '}
-							<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
-						</p>
+						</p> */}
+
 						<div
 							className='timerBox'
 							style={{
@@ -152,19 +171,29 @@ class App extends CommonForm {
 								<div className='timerElementName'>Seconds</div> */}
 							</div>
 						</div>
+						<div style={{ margin: '3rem 0' }}>
+							<p className='comingSoon'>
+								We are coming soon. Stay tuned with us. Subscribe to our
+								newsletter and follow us on our social media
+							</p>
+							{/* <p className='comingSoon'>
+								<span>Getting curious? Write to us at </span>
+								<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
+							</p> */}
+						</div>
 
 						<div
 							style={{
 								margin: '2rem 0',
 							}}>
-							<h1
+							{/* <h1
 								style={{
 									fontFamily: 'Raleway',
 									fontWeight: 800,
 									fontSize: '2.4rem',
 								}}>
 								Follow us here!
-							</h1>
+							</h1> */}
 							<div
 								style={{
 									display: 'flex',
@@ -175,54 +204,69 @@ class App extends CommonForm {
 									icon={faFacebook}
 									style={{
 										color: 'rgb(26,38,57)',
-										fontSize: '35px',
+										fontSize: '3rem',
 										margin: '0 1rem',
 										cursor: 'pointer',
 									}}
+									onClick={() =>
+										window.open('https://www.facebook.com/lendenindia01')
+									}
 								/>
 								<FontAwesomeIcon
 									icon={faInstagram}
 									style={{
 										color: 'rgb(26,38,57)',
-										fontSize: '35px',
+										fontSize: '3rem',
 										margin: '0 1rem',
 										cursor: 'pointer',
 									}}
+									onClick={() =>
+										window.open('https://www.instagram.com/lendenindia/?hl=en')
+									}
 								/>
 								<FontAwesomeIcon
 									icon={faLinkedin}
 									style={{
 										color: 'rgb(26,38,57)',
-										fontSize: '35px',
+										fontSize: '3rem',
 										margin: '0 1rem',
 										cursor: 'pointer',
 									}}
+									onClick={() =>
+										window.open(
+											'https://www.linkedin.com/company/lendenindia/?viewAsMember=true'
+										)
+									}
 								/>
 							</div>
 						</div>
 
 						<div
 							style={{
-								border: '1px solid #FDBA49',
+								border: '1px solid rgb(26,38,57)',
+								borderRadius: '4px',
 								marginTop: '6vh',
 								width: '80vw',
 								maxWidth: '400px',
-								padding: '15px 25px',
+								padding: '1.5rem 2rem        ',
 								margin: '5vh auto ',
 							}}>
 							<FontAwesomeIcon
 								icon={faPaperPlane}
 								style={{
-									color: '#FDBA49',
+									color: 'rgb(26,38,57)',
 									fontSize: '35px',
 									marginTop: '1vh',
-									marginBottom: '2vh',
+									marginBottom: '1vh',
 								}}
 							/>
-							<p className='newsletter'>
-								No love (news)letters, purely barter.
+							<p
+								className='newsletter'
+								style={{ fontSize: '16px', margin: '1rem 0' }}>
+								Want to know more about Lenden and barter? Subscribe to our
+								newsletter.
 							</p>
-							<p className='newsletter'> Subscribe now</p>
+							{/* <p className='newsletter'>Subscribe now</p> */}
 							<Form
 								style={{ maxWidth: 300, margin: 'auto' }}
 								noValidate
@@ -235,12 +279,18 @@ class App extends CommonForm {
 									variant='primary'
 									type='submit'
 									style={{
-										backgroundColor: '#FDBA49',
+										backgroundColor: 'rgb(26,38,57)',
 										border: 'none',
 									}}>
 									Subscribe
 								</Button>
 							</Form>
+						</div>
+						<div style={{ margin: '2rem 0' }}>
+							<p className='comingSoon'>
+								<span>Getting curious? Write to us at </span>
+								<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
+							</p>
 						</div>
 					</div>
 				</div>

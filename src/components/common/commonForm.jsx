@@ -22,7 +22,7 @@ class CommonForm extends Component {
 		return '';
 	};
 
-	handleSubmit = (e) => {
+	handleSubmit = e => {
 		e.preventDefault();
 		this.setState({
 			success: '',
@@ -80,7 +80,7 @@ class CommonForm extends Component {
 					margin: '3vh auto 3vh auto',
 				}}
 				size={50}
-				color={'#FDBA49'}
+				color={'rgb(26,38,57)'}
 				loading={this.state.loading}
 			/>
 		);
