@@ -171,15 +171,30 @@ class App extends CommonForm {
 								<div className='timerElementName'>Seconds</div> */}
 							</div>
 						</div>
+
+
+						
+
 						<div style={{ margin: '3rem 0' }}>
+							<p className='comingSoon' style={{margin: '2rem auto'}}>
+								<span>Want to barter your product?</span>
+								<div style={{
+									width: 'fit-content', 
+									color: 'white',
+									backgroundColor: 'rgb(26,38,57)', 
+									padding: '0.6rem 0.4rem',
+									fontSize: '.9rem',
+									borderRadius: '4px',
+									margin: '1rem auto',
+
+								}}>
+									Post your Product
+									</div>
+							</p>
 							<p className='comingSoon'>
 								We are coming soon. Stay tuned with us. Subscribe to our
 								newsletter and follow us on our social media
 							</p>
-							{/* <p className='comingSoon'>
-								<span>Getting curious? Write to us at </span>
-								<a href='mailto: info@lendenindia.in'>info@lendenindia.in</a>
-							</p> */}
 						</div>
 
 						<div
