@@ -1,7 +1,5 @@
 import React from 'react';
 import { Image, Form, Button } from 'react-bootstrap';
-import moment from 'moment';
-import 'moment-countdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -12,7 +10,7 @@ import {
 import './App.css';
 import CommonForm from './components/common/commonForm';
 import Joi from 'joi-browser';
-import { ToastContainer, Flip } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import http from './services/httpService';
 
@@ -176,7 +174,7 @@ class App extends CommonForm {
 						
 
 						<div style={{ margin: '3rem 0' }}>
-							<p className='comingSoon' style={{margin: '2rem auto'}}>
+							<div className='comingSoon' style={{margin: '2rem auto'}}>
 								<span>Want to barter your product?</span>
 								<div style={{
 									width: 'fit-content', 
@@ -186,11 +184,12 @@ class App extends CommonForm {
 									fontSize: '.9rem',
 									borderRadius: '4px',
 									margin: '1rem auto',
-
-								}}>
+									
+								}}
+								onClick={() => this.props.history.push('/post-product')}>
 									Post your Product
 									</div>
-							</p>
+							</div>
 							<p className='comingSoon'>
 								We are coming soon. Stay tuned with us. Subscribe to our
 								newsletter and follow us on our social media
